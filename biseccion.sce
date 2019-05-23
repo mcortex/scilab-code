@@ -1,5 +1,5 @@
 function y=f(x)
-    y=x^2-2
+    y=x^2-7
     //y=x^4-2*x^2-12*x+16*x-40
     //y=cos(x)-x
 endfunction
@@ -11,14 +11,13 @@ xgrid(1);
 
 
 //Pedir datos al usuario
-clc()
-a=input("Ingrese el limite inferior del intervalo para esta funcion:");
-b=input("Ingrese el limite superior del intervalo para esta funcion:");
-cota_error=input("\n Ingrese el error permitido como criterio de corte de la ecuacion:");
-
-i=1;
+//clc()
+//a=input("Ingrese el limite inferior del intervalo para esta funcion:");
+//b=input("Ingrese el limite superior del intervalo para esta funcion:");
+//cota_error=input("\n Ingrese el error permitido como criterio de corte de la ecuacion:");
 
 function p=biseccion(a,b,f,cota_error)
+    i=1;
     fa=feval(a,f); //f(a) 
     fb=feval(b,f); //f(b)
     
