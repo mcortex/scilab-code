@@ -1,27 +1,24 @@
 function y=f(x)
-    //y=x^2-7
-    //y=x^4-2*x^2-12*x+16*x-40
-    //y=cos(x)-x
-    //y=(x.*cos(x))./(log(x))
-    //y=2*x-%e^(-x)
-    //y=%e^(-2*x)+x-1
-    y=x^3-7*x^2+14*x-6
-    //y=x^2-1
+    y=1/(1+x^2)
 endfunction
 //Grafico f(x)
-x=-10:0.1:10;
+x=-2:0.1:2;
 plot2d(x, f(x));
 //muestra grilla
 xgrid(3,1,7);
 
-
-//Pedir datos al usuario
-//clc()
-//a=input("Ingrese el limite inferior del intervalo para esta funcion:");
-//b=input("Ingrese el limite superior del intervalo para esta funcion:");
-//cota_error=input("\n Ingrese el error permitido como criterio de corte de la ecuacion:");
-
-function p=biseccion(a,b,f,cota_error)
+function p=intinf(a,b,N,f)
+    h=(b-a)/n
+    x=a // Extremo inferior
+    I=0
+    for i=1:N
+        I=I+f(x);
+        x=x+h
+    end
+    I=I*h
+endfunction
+    
+    
     i=1;
     fa=feval(a,f); //f(a) 
     fb=feval(b,f); //f(b)
